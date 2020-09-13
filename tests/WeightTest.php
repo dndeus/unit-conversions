@@ -2,13 +2,18 @@
 
 namespace Dndeus\UnitConversions\Tests;
 
+use Dndeus\UnitConversions\Weight;
 use PHPUnit\Framework\TestCase;
 
-class ExampleTest extends TestCase
+class WeightTest extends TestCase
 {
     /** @test */
-    public function true_is_true()
+    public function it_can_converts_kilograms_to_libs()
     {
-        $this->assertTrue(true);
+        $kilograms = Weight::fromKilograms(100);
+
+        $libs = $kilograms->toLibs();
+
+        $this->assertEquals(220.4623, $libs);
     }
 }
