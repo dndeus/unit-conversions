@@ -1,6 +1,7 @@
 <?php
 
 namespace Dndeus\UnitConversions;
+use \Exception;
 
 class Weight
 {
